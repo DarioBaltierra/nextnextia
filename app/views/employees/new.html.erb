@@ -1,0 +1,21 @@
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">Contratacion de empleado</h3>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-half">
+      <br>
+      <%= form_tag("/employees/create", :method=>"post") do %>
+        <p><input class="w3-input w3-border" type="text" placeholder="Nombre" required name="Name"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Apellido" required name="Email"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="RFC" required name="Subject"></p>
+        <div class="form-group">
+  <label for="role">Puesto:</label>
+  <%= select_tag "role", options_from_collection_for_select(@persons, "id", "name"), class:"form-control"%>
+        <p>
+          <button class="w3-button w3-black" type="submit">
+             Dar de alta
+          </button>
+        </p>
+        <%end%>
+    </div>
+  </div>
+</div>

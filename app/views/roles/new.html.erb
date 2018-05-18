@@ -1,0 +1,20 @@
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">Creacion de puesto</h3>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-all">
+      <br>
+      <%= form_tag("/roles/create", :method=>"post") do %>
+        <p><input class="w3-input w3-border" type="text" placeholder="Nombre de puesto" required name="Name"></p>
+        <label for="comment">Descripciòn del puesto:</label>
+        <textarea class="form-control" rows="12" id="comment"></textarea>
+        <div class="form-group">
+          <br>
+          <center>
+            <button class="w3-button w3-black" type="submit">
+               Crear
+            </button>
+        </p>
+        <%end%>
+    </div>
+  </div>
+</div>
